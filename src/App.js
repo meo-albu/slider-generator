@@ -19,7 +19,7 @@ function App() {
 
 
           <div className="version">
-            v 1.0.0
+            v 2.0.0
         </div>
         </header>
 

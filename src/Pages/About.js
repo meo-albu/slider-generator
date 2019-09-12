@@ -8,6 +8,7 @@ const About = () => {
 
       <p>Version 1.0.0</p>
       <p>Built with <a href="http://reactjs.org" rel="noopener noreferrer" target="_blank">React.js</a>, <a href="https://www.styled-components.com/" rel="noopener noreferrer" target="_blank">Styled Components</a>, <a href="https://highlightjs.org" rel="noopener noreferrer" target="_blank">Highlight.js</a></p>
+      <p>Visit <a href="https://github.com/meo-albu/slider-generator" rel="noopener noreferrer" target="_blank">GitHub page</a></p>
     </AboutPage>
   )
 }
