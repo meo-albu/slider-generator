@@ -192,3 +192,58 @@ export const Output = Styled.div`
       margin-top: 25px;
     }
 `;
+
+export const FadeDiv = Styled.div`
+    height: 300px;
+    border: 5px solid #8278F2;
+
+    div {
+      position: relative;
+      height: 100%;
+  
+      div {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        animation: imageAnimation ${({imagini}) => imagini * 6}s linear infinite 0s;
+        
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      div:nth-of-type(1) {
+        position: static;
+        opacity: 1;
+      }
+
+      ${({imagini}) => {
+        return (
+          [...Array(imagini - 1)].map((slide, i) => {
+            return `div:nth-of-type(${i + 2}) {
+              animation-delay: ${6 * (i + 1)}s;
+            }`
+          }).join('')
+        )
+      }}
+    }
+
+    @keyframes imageAnimation {
+      3% {
+          opacity: 1;
+      }
+  
+      ${({imagini}) => 100 / imagini}% {
+          opacity: 1;
+      }
+  
+      ${({imagini}) => 100 / imagini + 5}% {
+          opacity: 0;
+      }
+    }
+`
